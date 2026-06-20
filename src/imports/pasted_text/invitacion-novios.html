@@ -1,0 +1,130 @@
+## CONTEXTO DEL PROYECTO
+Crear una invitación digital de casamiento de una sola página (scroll vertical), mobile-first, para los novios Carolina & Nicolás. El diseño debe sentirse elegante, romántico y natural — NO oscuro, NO genérico tipo plantilla de Canva.
+ 
+---
+ 
+## 1. PALETA DE COLORES (usar exactamente estos hex)
+ 
+| Nombre | Hex | Uso |
+|---|---|---|
+| `--cream` | `#FAF7F0` | Fondo claro principal |
+| `--sage` | `#8A9A7E` | Verde sage, acento principal |
+| `--sage-dark` | `#5F6E54` | Verde sage oscuro, texto sobre fondo claro |
+| `--terracotta` | `#B8835A` | Tierra/terracota, acento secundario |
+| `--dark-text` | `#3A3528` | Texto principal sobre fondo claro |
+| `--white` | `#FFFFFF` | Fondo de tarjetas |
+ 
+NO usar negro puro (#000000) en ningún lugar. NO usar bordó, rosa, ni dorado brillante.
+ 
+---
+ 
+## 2. TIPOGRAFÍAS (Google Fonts)
+ 
+- **Display (nombres, títulos grandes):** `Cormorant Garamond`, estilo italic, peso 400
+- **Texto secundario (labels, eyebrows):** `Cormorant Garamond`, peso 500, todo en mayúsculas, letter-spacing 0.25em
+- **Cuerpo de texto:** `DM Sans`, peso 300
+---
+ 
+## 3. ESTRUCTURA EXACTA DE SECCIONES (en este orden, scroll vertical)
+ 
+### SECCIÓN 1 — HERO
+- Fondo: `--cream`
+- Altura: 100vh (pantalla completa)
+- Contenido centrado verticalmente y horizontalmente:
+  1. Texto pequeño arriba: `NOS CASAMOS` (Cormorant Garamond, mayúsculas, letter-spacing 0.3em, tamaño 12px, color `--sage-dark`)
+  2. Espacio de 24px
+  3. Nombre grande: `Carolina` salto de línea `& Nicolás` (Cormorant Garamond italic, tamaño clamp(48px, 12vw, 96px), color `--sage-dark`, line-height 1.1)
+  4. Espacio de 32px
+  5. Línea divisoria horizontal de 40px de ancho, 1px de alto, color `--terracotta`, opacidad 0.5
+  6. Espacio de 16px
+  7. Texto fecha: `Sábado 14 de Noviembre de 2026` (DM Sans, tamaño 14px, color `--dark-text`, letter-spacing 0.1em, mayúsculas)
+- Indicador de scroll: línea vertical de 32px con animación de pulso, centrada abajo, color `--terracotta`
+### SECCIÓN 2 — MENSAJE
+- Fondo: `--white`
+- Padding vertical: 80px, padding horizontal: 24px
+- Contenido centrado, máximo 480px de ancho:
+  1. Eyebrow: `UNA HISTORIA DE AMOR` (mismo estilo que sección 1)
+  2. Título: `Llegó el día` (Cormorant Garamond italic, tamaño clamp(32px, 6vw, 48px), color `--sage-dark`)
+  3. Párrafo: "Después de tantos años juntos, llegó el momento de decir que sí frente a las personas que más queremos. Tu presencia en este día significa el mundo para nosotros." (DM Sans, tamaño 16px, line-height 1.8, color `--dark-text`, opacidad 0.75)
+### SECCIÓN 3 — CUENTA REGRESIVA
+- Fondo: `--sage` (sólido)
+- Padding vertical: 80px
+- Contenido centrado:
+  1. Eyebrow en blanco: `FALTAN`
+  2. Cuatro bloques en fila horizontal (en mobile: 2x2 grid si no entra en una fila), cada bloque con:
+     - Número grande (Cormorant Garamond, tamaño clamp(40px, 10vw, 64px), color blanco, peso 600)
+     - Label debajo: "DÍAS" / "HORAS" / "MINUTOS" / "SEGUNDOS" (DM Sans, tamaño 10px, mayúsculas, letter-spacing 0.2em, color blanco, opacidad 0.7)
+  3. Los números se actualizan en tiempo real contando hacia atrás desde la fecha 14 de noviembre de 2026, 18:30 hs (zona horaria GMT-3)
+### SECCIÓN 4 — DETALLES DEL EVENTO
+- Fondo: `--cream`
+- Padding vertical: 80px, padding horizontal: 24px
+- Contenido centrado, máximo 480px:
+  1. Eyebrow: `EL DÍA ESPECIAL`
+  2. Título: `Detalles`
+  3. Dos tarjetas lado a lado (en mobile: apiladas verticalmente):
+     - Tarjeta 1: ícono de reloj (línea, no relleno) + título "CEREMONIA" + texto "18:30 hs"
+     - Tarjeta 2: ícono de copa (línea, no relleno) + título "FIESTA" + texto "A continuación"
+  4. Cada tarjeta: fondo blanco, borde 1px color `--sage` opacidad 0.3, padding 24px, border-radius 8px
+  5. Debajo de las tarjetas, una etiqueta tipo "pill": borde 1px `--terracotta`, texto "DRESSCODE FORMAL · EVITAR EL BLANCO" (DM Sans, tamaño 11px, mayúsculas, letter-spacing 0.15em, color `--terracotta`)
+### SECCIÓN 5 — UBICACIÓN
+- Fondo: `--white`
+- Padding vertical: 80px, padding horizontal: 24px
+- Contenido centrado, máximo 480px:
+  1. Eyebrow: `¿DÓNDE?`
+  2. Título: `El lugar`
+  3. Texto: "Salón Los Cipreses" (en negrita/bold, tamaño 18px, color `--sage-dark`) salto de línea "Ruta 11 Km 4, Santa Fe" (tamaño 14px, color `--dark-text` opacidad 0.7)
+  4. Botón: borde 1px `--sage-dark`, sin fondo (outline), texto "VER EN GOOGLE MAPS", al hacer click abre en nueva pestaña el link `https://maps.google.com/?q=Salon+Los+Cipreses+Ruta+11+Santa+Fe`
+### SECCIÓN 6 — MENSAJES PARA LOS NOVIOS
+- Fondo: `--sage`
+- Padding vertical: 80px, padding horizontal: 24px
+- Contenido centrado, máximo 480px, texto en blanco:
+  1. Eyebrow: `PARA NOSOTROS`
+  2. Título: `Dejanos un mensaje`
+  3. Párrafo: "Si querés dejarnos unas palabras para este día, nos encantaría leerlas." (color blanco, opacidad 0.85)
+  4. Botón sólido: fondo blanco, texto color `--sage-dark`, texto "ESCRIBIR MENSAJE", al hacer click abre en nueva pestaña un Google Form (usar placeholder de URL: `[URL_GOOGLE_FORM_MENSAJES]`)
+### SECCIÓN 7 — RSVP
+- Fondo: `--cream`
+- Padding vertical: 80px, padding horizontal: 24px
+- Contenido centrado, máximo 480px:
+  1. Eyebrow: `CONFIRMÁ TU ASISTENCIA`
+  2. Título: `¿Vas a estar?`
+  3. Línea divisoria (igual que sección 1)
+  4. Texto: "Confirmá antes del " + texto en negrita "1 de noviembre" (tamaño 14px)
+  5. Botón sólido: fondo `--sage-dark`, texto blanco, ícono de WhatsApp a la izquierda del texto, texto "CONFIRMAR POR WHATSAPP", al hacer click abre en nueva pestaña el link `https://wa.me/5493XXXXXXXXX?text=Hola%20Carolina%20y%20Nicol%C3%A1s%2C%20confirmo%20mi%20asistencia%20a%20su%20casamiento%20el%2014%20de%20noviembre`
+### SECCIÓN 8 — FOOTER
+- Fondo: `--sage-dark`
+- Padding vertical: 32px
+- Texto centrado, blanco, opacidad 0.6, tamaño 11px, mayúsculas, letter-spacing 0.2em: "CAROLINA & NICOLÁS · 14.11.2026"
+---
+ 
+## 4. COMPORTAMIENTO Y ANIMACIONES
+ 
+1. **Reveal on scroll:** cada sección (excepto el Hero) aparece con fade-in + desplazamiento de 24px hacia arriba cuando entra en el viewport. Duración 0.8s, easing ease-out.
+2. **Cuenta regresiva:** se actualiza cada segundo en tiempo real, calculando la diferencia entre la hora actual y el 14 de noviembre de 2026 a las 18:30 hs (GMT-3). Formato de cada número: 2 dígitos con cero a la izquierda (ej: "05" no "5").
+3. **Indicador de scroll en el Hero:** animación de pulso continuo (opacidad entre 0.3 y 1) en loop infinito, duración 2s.
+4. **Botones:** sin efecto hover (este es un requisito explícito, no agregar transiciones de hover).
+---
+ 
+## 5. RESPONSIVE
+ 
+- Diseño mobile-first, ancho de referencia 375px.
+- Breakpoint tablet/desktop: 768px — en este punto, las tarjetas de la Sección 4 pueden mostrarse lado a lado si no lo estaban ya.
+- Todo el texto debe usar `clamp()` para escalar entre mobile y desktop según los valores ya especificados en cada sección.
+- Ningún texto debe truncarse ni desbordar su contenedor en pantallas de 320px de ancho mínimo.
+---
+ 
+## 6. CONTENIDO QUE NO DEBE CAMBIAR
+ 
+Todos los textos, nombres, fechas, horarios y direcciones especificados arriba son finales y no deben alterarse, resumirse ni reformularse. Los placeholders entre corchetes (`[URL_GOOGLE_FORM_MENSAJES]` y el número de WhatsApp `5493XXXXXXXXX`) deben quedar visibles tal cual en el código para ser reemplazados manualmente después.
+ 
+---
+ 
+## 7. LO QUE NO HACER
+ 
+- No usar emojis en ningún texto.
+- No usar iconos rellenos (filled) — todos los iconos deben ser de línea (outline/stroke).
+- No agregar secciones que no estén en esta lista.
+- No usar gradientes.
+- No usar sombras pronunciadas (box-shadow), solo sombras muy sutiles si son estrictamente necesarias para separar tarjetas del fondo.
+- No usar border-radius mayor a 8px en ningún elemento.
+ 
